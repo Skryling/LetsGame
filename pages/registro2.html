@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/styles/registro2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="/images/Let'sGamePurple-1.png" />
+    <title>Continuar Registro</title>
+  </head>
+  <body class="gradient-background">
+    <main class="d-flex justify-content-center">
+      <div class="card bg-black mt-4">
+        <img
+          id="logo"
+          src="/images/Let'sGamePurple-1.png"
+          class="card-img-top"
+          alt="LogoPurple"
+        />
+        <h5 class="card-title text-white text-center">Regístrate</h5>
+        <div class="card-body">
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="inputState" class="form-label">País</label>
+              <select id="inputState" class="form-select">
+                <option selected>Elegir...</option>
+                <option>Argentina</option>
+                <option>Brasil</option>
+                <option>Chile</option>
+                <option>...</option>
+                <!--Buscar la forma de hacer mas dinamico y colocar la mayoria de paises latinoamericanos-->
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputName"
+                placeholder="Ingrese su nombre"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputSurname" class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputSurname"
+                placeholder="Ingrese su apellido"
+              />
+            </div>
+            <div class="col-12">
+              <label for="inputNameScreen" class="form-label"
+                >Nombre de Pantalla</label
+              >
+              <div class="d-flex">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputNameScreen"
+                  placeholder="Ingrese su nombre de pantalla"
+                />
+                <button id="buttonAltaImportancia" class="border-0 bg-black">
+                  <img
+                    id="altaImportancia"
+                    src="/images/icons8-alta-importancia-64.png"
+                    alt="altaImportancia!"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="inputEmail4" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="inputEmail4" />
+            </div>
+            <div class="col-12">
+              <label for="inputPassword4" class="form-label">Contraseña</label>
+              <div class="d-flex">
+                <div class="input-group">
+                  <input
+                    id="txtPassword"
+                    type="Password"
+                    class="form-control"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      id="show_password"
+                      class="btn btn-outline-light"
+                      type="button"
+                      onclick="mostrarPassword()"
+                    >
+                      <span class="fa fa-eye-slash icon"></span>
+                    </button>
+                  </div>
+                </div>
+                <button id="buttonAltaImportancia" class="border-0 bg-black">
+                  <img
+                    id="altaImportancia"
+                    src="/images/icons8-alta-importancia-64.png"
+                    alt="altaImportancia!"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Me gustaria recibir noticias, encuentas y ofertas especiales
+                  de Let's Game!
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  He leìdo y estoy de acuerdo con los
+                  <a href="#">Terminos del servicio.</a>
+                  <!--Enviar a la pagina 404-->
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn btn-outline-light m-2 <!--disabled--!>"
+              >
+                Registrarme
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/registro2.js"></script>
+  </body>
+</html>

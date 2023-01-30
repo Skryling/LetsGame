@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/styles/registro1.css" />
+
+    <link rel="shortcut icon" href="/images/Let'sGamePurple-1.png" />
+    <title>Crear Cuenta Let's Game</title>
+  </head>
+  <body class="gradient-background">
+    <main class="d-flex justify-content-center">
+      <div class="card bg-black mt-4">
+        <img
+          id="logo"
+          src="/images/Let'sGamePurple-1.png"
+          class="card-img-top"
+          alt="LogoPurple"
+        />
+        <h5 class="card-title text-white text-center">
+          Introduce tu fecha de nacimiento
+        </h5>
+        <div class="card-body">
+          <form onsubmit="guardarFecha(event)" class="d-flex row">
+            <div>
+              <div class="d-flex justify-content-center">
+                <input
+                  type="date"
+                  name="fecha"
+                  id="dateBirth"
+                  onclick="fechaNacimiento()"
+                />
+              </div>
+              <div>
+                <small>
+                  ¿Por qué necesitamos tu fecha de nacimiento?
+                  <button
+                    id="buttonAmpliar"
+                    class="border-0 bg-black"
+                    onclick="ampliarInfo();"
+                  >
+                    <img
+                      id="imageAmpliar"
+                      src="/images/icons8-flecha-ampliar-64.png"
+                      alt="ampliarInformacion"
+                      width="30px"
+                      height="30px"
+                      {#
+                      onclick="changeImg()"
+                      #}
+                    />
+                  </button>
+                </small>
+                <br />
+                <!--Aplicar JS para que cuando expanda, cambie la img, -->
+                <div id="nacimiento" class="border-bottom border-white">
+                  <small id="parrDataBirth">
+                    Te pedimos tu fecha de nacimiento para ayudarte a disfrutar
+                    de una expeciencia divertida y segura según tu edad.
+                  </small>
+                  <!--Guarda la fecha de nacimiento en el LocalStorage-->
+                </div>
+              </div>
+            </div>
+          </form>
+          <a
+            href="./registro2.html"
+            id="bottonContinuar"
+            class="btn btn-outline-light m-2"
+            disabled
+            >Continuar</a
+          >
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/registro1.js"></script>
+  </body>
+</html>
