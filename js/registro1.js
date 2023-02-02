@@ -1,45 +1,29 @@
-// $(document).ready(function () {
-//   $(".datepicker").datepicker({
-//     format: "dd-mm-yyyy",
-//     autoclose: true,
-//     startDate: "0d",
-//   });
-// });
-
-const fechadeNacimientos =
-  JSON.parse(localStorage.getItem("fechadenacimiento")) || [];
-
 function ampliarInfo() {
   const parrafo = document.getElementById("nacimiento");
-  parrafo.style.display = "block";
+  parrafo.classList.remove("d-none");
+  let bottonAmpliar = document.getElementById("buttonAmpliar");
+  bottonAmpliar.classList.add("d-none");
+  let bottonContraer = document.getElementById("buttonContraer");
+  bottonContraer.classList.remove("d-none");
 }
-
-// change = 0;
-// function changeImg() {
-//   let image = document.getElementById("imageAmpliar");
-//   if (change == 1) {
-//     image.src = "/images/icons8-flecha-contraer-64.png";
-//     change = 0;
-//   } else {
-//     image.src = "/images/icons8-flecha-ampliar-64.png";
-//     change = 1;
-//   }
-// }
-
+function contraerInfo() {
+  const parrafo = document.getElementById("nacimiento");
+  parrafo.classList.add("d-none");
+  let bottonAmpliar = document.getElementById("buttonAmpliar");
+  bottonAmpliar.classList.remove("d-none");
+  let bottonContraer = document.getElementById("buttonContraer");
+  bottonContraer.classList.add("d-none");
+}
 function fechaNacimiento() {
   let dataBirth = document.getElementById("dateBirth").value;
+  let bottonContinuar = document.getElementById("bottonContinuar");
   if (dataBirth) {
-    document.getElementById("bottonContinuar").disabled = false;
-  } else {
-    document.getElementById("bottonContinuar").disabled = true;
+    bottonContinuar.classList.remove("deshabilitado");
+    bottonContinuar.classList.add("habilitado");
   }
 }
 
-const guardarFecha = (event) => {
-  event.preventDefault();
+const guardarFecha = () => {
   let dataBirth = document.getElementById("dateBirth").value;
-
-  let fechaNacimientos = new fechaNacimientos(fechaNacimiento);
-  fechaNacimientos.push(fechaNacimientos);
-  localStorage.setItem("fechaDeNacimiento", JSON.stringify(fechaNacimientos));
+  localStorage.setItem("fechaDeNacimiento", JSON.stringify(dataBirth));
 };

@@ -1,6 +1,10 @@
 .card{
   width: 25rem;
 }
-#nacimiento{
-  display: none;
+.deshabilitado{
+  pointer-events: none; 
 }
+.habilitado{
+  pointer-events:all;
+}
+

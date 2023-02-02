@@ -39,11 +39,11 @@
           <form class="row g-3">
             <div class="col-12">
               <label for="inputState" class="form-label">País</label>
-              <select id="inputState" class="form-select">
-                <option selected>Elegir...</option>
-                <option>Argentina</option>
-                <option>Brasil</option>
-                <option>Chile</option>
+              <select id="inputState" class="form-select" required>
+                <option></option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
                 <option>...</option>
                 <!--Buscar la forma de hacer mas dinamico y colocar la mayoria de paises latinoamericanos-->
               </select>
@@ -55,6 +55,11 @@
                 class="form-control"
                 id="inputName"
                 placeholder="Ingrese su nombre"
+                minlength="5"
+                maxlength="20"
+                required
+                pattern="[A-Za-z]"
+                title="Sólo se permiten letras (mayúsculas y minúsculas). Entre 3 y 20 caracteres."
               />
             </div>
             <div class="col-md-6">
@@ -64,6 +69,11 @@
                 class="form-control"
                 id="inputSurname"
                 placeholder="Ingrese su apellido"
+                minlength="5"
+                maxlength="20"
+                required
+                pattern="[A-Za-z]"
+                title="Sólo se permiten letras (mayúsculas y minúsculas). Entre 3 y 20 caracteres."
               />
             </div>
             <div class="col-12">
@@ -76,19 +86,35 @@
                   class="form-control"
                   id="inputNameScreen"
                   placeholder="Ingrese su nombre de pantalla"
+                  minlength="5"
+                  maxlength="20"
+                  required
+                  pattern="[A-Za-z0-9]+"
+                  title="Sólo se permiten letras (mayúsculas y minúsculas) y números. Entre 3 y 20 caracteres."
                 />
-                <button id="buttonAltaImportancia" class="border-0 bg-black">
+                <abbr
+                  title="Este nombre se mostrará como nombre de usuario en tu pantalla."
+                >
                   <img
                     id="altaImportancia"
                     src="/images/icons8-alta-importancia-64.png"
                     alt="altaImportancia!"
                   />
-                </button>
+                </abbr>
               </div>
             </div>
             <div class="col-12">
               <label for="inputEmail4" class="form-label">Correo</label>
-              <input type="email" class="form-control" id="inputEmail4" />
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                required
+                minlength="5"
+                required
+                pattern="[A-Za-z0-9]+"
+                title="Sólo se permiten letras (mayúsculas y minúsculas) y números. Minimo 5 caracteres."
+              />
             </div>
             <div class="col-12">
               <label for="inputPassword4" class="form-label">Contraseña</label>
@@ -98,6 +124,8 @@
                     id="txtPassword"
                     type="Password"
                     class="form-control"
+                    required
+                    minlength="8"
                   />
                   <div class="input-group-append">
                     <button
@@ -109,14 +137,29 @@
                       <span class="fa fa-eye-slash icon"></span>
                     </button>
                   </div>
+                  <div class="input-group-append">
+                    <button
+                      id="ocultar_password"
+                      class="btn btn-outline-light d-none"
+                      type="button"
+                      onclick="OcultarPassword()"
+                    >
+                      <i class="fa fa-sharp fa-solid fa-eye"></i>
+                    </button>
+                  </div>
                 </div>
-                <button id="buttonAltaImportancia" class="border-0 bg-black">
+                <abbr
+                  title="Tu contraseña debe tener:
+                - 8 caracteres como minimo.
+                - Al menos una mayúscula.
+                - Al menos un número."
+                >
                   <img
                     id="altaImportancia"
                     src="/images/icons8-alta-importancia-64.png"
                     alt="altaImportancia!"
                   />
-                </button>
+                </abbr>
               </div>
             </div>
             <div class="col-12">
@@ -138,6 +181,7 @@
                   class="form-check-input"
                   type="checkbox"
                   id="gridCheck"
+                  required
                 />
                 <label class="form-check-label" for="gridCheck">
                   He leìdo y estoy de acuerdo con los
@@ -148,8 +192,10 @@
             </div>
             <div class="col-12">
               <button
-                type="submit"
-                class="btn btn-outline-light m-2 <!--disabled--!>"
+                type="button"
+                value="Registrarme"
+                onclick="guardarUsuario()"
+                class="btn btn-outline-light m-2"
               >
                 Registrarme
               </button>
@@ -164,5 +210,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/registro2.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
