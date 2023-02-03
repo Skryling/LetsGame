@@ -1,0 +1,65 @@
+body{
+    background-color: #150050;
+    color: beige;
+}
+.header-main {
+    height: 10vh;
+    position: relative;
+    width: 100%;
+}
+
+.img-main {
+    object-fit: cover;
+    position: relative;
+}
+
+.col-12.col-md-4.col-lg-3 img{
+    width: 100%;
+    height: 300px;
+}
+
+/* .hover img:hover{
+    padding: 10px;
+    opacity: 0.25;
+} */
+
+.titulo{
+    background-color: #610094;
+}
+
+.info{
+    font-size: 20px;
+}
+
+header{
+    color: beige;
+}
+
+/* .div-imagen {
+    display:inline-block;
+    position:relative;
+}
+  
+.div-imagen > div {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    padding:10px;
+    margin:0;
+} */
+
+.datos{
+    background-color: rgba(31, 31, 31, 0.9);
+    opacity: 0;
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    font-size: larger;
+}
+
+.hover .datos:hover{
+    opacity: 1;
+    
+}
