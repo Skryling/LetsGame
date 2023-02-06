@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/detallejuego.css" />
+    <title>Detalle de juego</title>
+  </head>
+  <body class="gradient-background">
+    <main>
+      <h1>Nombre del juego</h1>
+      <article class="row m-3 justify-content-center">
+        <article class="d-flex col-lg-6">
+          <!--Section descrpcion del juego-->
+          <section>
+            <div>
+              <img src="" alt="" />
+              <video src=""></video>
+            </div>
+            <div>
+              <p>Pequeña descripcion del juego</p>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="bloqueIzq">
+                <h4>Género</h4>
+                <a href="">Estrategia</a>
+              </div>
+              <div class="bloqueIzq">
+                <h4>Caracteristicas</h4>
+                <a href="">Un solo jugador</a>
+              </div>
+            </div>
+            <div>
+              <h2>Acerca del juego...</h2>
+              <p>Descripcion mas larga del juego</p>
+            </div>
+            <div>
+              <!--Hacer una tabla-->
+              <h4>Especificaciones</h4>
+              <div class="card text-bg-dark mb-3" style="max-width: 18rem">
+                <div class="card-header">Windows</div>
+                <div class="card-body">
+                  <table class="table text-white">
+                    <thead>
+                      <tr>
+                        <th scope="col">Minimo</th>
+                        <th scope="col">Requeridos</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Section compra del juego-->
+          <section>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <p>Precio</p>
+              <button>Comprar</button>
+            </div>
+          </section>
+        </article>
+      </article>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/detallejuegodata.js"></script>
+    <script src="/js/detallejuego.js"></script>
+  </body>
+</html>
